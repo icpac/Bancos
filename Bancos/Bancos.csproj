@@ -165,12 +165,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BancariasController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataContext\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bancaria.cs" />
     <Compile Include="Models\EmpClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +217,11 @@
     <Content Include="Views\Emp\Details.cshtml" />
     <Content Include="Views\Emp\Edit.cshtml" />
     <Content Include="Views\Emp\Index.cshtml" />
+    <Content Include="Views\Bancarias\Create.cshtml" />
+    <Content Include="Views\Bancarias\Delete.cshtml" />
+    <Content Include="Views\Bancarias\Details.cshtml" />
+    <Content Include="Views\Bancarias\Edit.cshtml" />
+    <Content Include="Views\Bancarias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

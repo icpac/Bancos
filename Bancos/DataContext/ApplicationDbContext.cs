@@ -14,5 +14,7 @@ namespace Bancos.DataContext
         { }
 
         public virtual DbSet<EmpClass> Empobj { get; set; }
+
+        public virtual DbSet<Bancaria> BancariaObj { get; set; }
     }
 }
