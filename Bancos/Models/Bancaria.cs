@@ -12,5 +12,7 @@ namespace Bancos.Models
     {
         [Key]
         public string Oid { get; set; }
+        public string Clave { get; set; }
+        public string Descripcion { get; set; }
     }
 }
