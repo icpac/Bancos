@@ -169,7 +169,7 @@
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovimientosController.cs" />
-    <Compile Include="DataContext\ApplicationDbContext.cs" />
+    <Compile Include="DataContext\BancosDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

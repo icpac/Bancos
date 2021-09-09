@@ -13,7 +13,7 @@ namespace Bancos.Controllers
 {
     public class EmpController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private BancosDbContext db = new BancosDbContext();
 
         // GET: Emp
         public ActionResult Index()

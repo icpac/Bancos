@@ -13,12 +13,12 @@ namespace Bancos.Controllers
 {
     public class BancariasController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private BancosDbContext db = new BancosDbContext();
 
         // GET: Bancarias
         public ActionResult Index()
         {
-            return View(db.BancariaObj.ToList());
+            return View(db.Bancarias.ToList());
         }
 
         // GET: Bancarias/Details/5
@@ -28,7 +28,7 @@ namespace Bancos.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Bancaria bancaria = db.BancariaObj.Find(id);
+            Bancaria bancaria = db.Bancarias.Find(id);
             if (bancaria == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Bancos.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.BancariaObj.Add(bancaria);
+                db.Bancarias.Add(bancaria);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Bancos.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Bancaria bancaria = db.BancariaObj.Find(id);
+            Bancaria bancaria = db.Bancarias.Find(id);
             if (bancaria == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Bancos.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Bancaria bancaria = db.BancariaObj.Find(id);
+            Bancaria bancaria = db.Bancarias.Find(id);
             if (bancaria == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Bancos.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Bancaria bancaria = db.BancariaObj.Find(id);
-            db.BancariaObj.Remove(bancaria);
+            Bancaria bancaria = db.Bancarias.Find(id);
+            db.Bancarias.Remove(bancaria);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

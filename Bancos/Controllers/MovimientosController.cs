@@ -20,7 +20,7 @@ namespace Bancos.Controllers
 {
     public class MovimientosController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private BancosDbContext db = new BancosDbContext();
 
         // GET: Movimientos
         public ActionResult Index()
